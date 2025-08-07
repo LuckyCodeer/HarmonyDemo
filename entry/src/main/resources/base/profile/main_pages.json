@@ -1,0 +1,13 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/TextPage",
+    "pages/InputPage",
+    "pages/ImagePage",
+    "pages/CheckPage",
+    "pages/list/LocalDataListPage",
+    "pages/list/NetListPage",
+    "pages/web/WebPage",
+    "pages/DialogPage"
+  ]
+}

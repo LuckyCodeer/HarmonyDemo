@@ -1,0 +1,84 @@
+{
+  "routerMap": [
+    {
+      "name": "TextPage",
+      "pageSourceFile": "src/main/ets/pages/TextPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "文本组件页面"
+      }
+    },
+    {
+      "name": "InputPage",
+      "pageSourceFile": "src/main/ets/pages/InputPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "输入组件页面"
+      }
+    },
+    {
+      "name": "ImagePage",
+      "pageSourceFile": "src/main/ets/pages/ImagePage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "图片显示"
+      }
+    },
+    {
+      "name": "CheckPage",
+      "pageSourceFile": "src/main/ets/pages/CheckPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "选择组件页面"
+      }
+    },
+    {
+      "name": "ListPage",
+      "pageSourceFile": "src/main/ets/pages/ListPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "列表页面"
+      }
+    },
+    {
+      "name": "LocalDataListPage",
+      "pageSourceFile": "src/main/ets/pages/list/LocalDataListPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "本地数据列表页面"
+      }
+    },
+    {
+      "name": "GridListPage",
+      "pageSourceFile": "src/main/ets/pages/list/GridListPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "宫格列表页面"
+      }
+    },
+    {
+      "name": "NetListPage",
+      "pageSourceFile": "src/main/ets/pages/list/NetListPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "网络数据列表页面"
+      }
+    },
+    {
+      "name": "WebPage",
+      "pageSourceFile": "src/main/ets/pages/web/WebPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "web页面"
+      }
+    },
+    {
+      "name": "DialogPage",
+      "pageSourceFile": "src/main/ets/pages/DialogPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "Dialog"
+      }
+    }
+  ]
+}
