@@ -79,6 +79,14 @@
       "data": {
         "description" : "Dialog"
       }
+    },
+    {
+      "name": "RefreshLoadMoreListPage",
+      "pageSourceFile": "src/main/ets/pages/list/RefreshLoadMoreListPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "下拉刷新下拉加载更多"
+      }
     }
   ]
 }

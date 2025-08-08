@@ -29,6 +29,11 @@ export struct ListPage {
           .onClick(() => {
             this.pageStack?.pushDestinationByName("LocalDataListPage", Axis.Horizontal, true);
           })
+
+        Button('下拉刷新上拉加载更多')
+          .onClick(() => {
+            this.pageStack?.pushDestinationByName("RefreshLoadMoreListPage", '', true);
+          })
       }
     }.title('列表')
     .onReady((context: NavDestinationContext) => {

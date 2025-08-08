@@ -8,6 +8,7 @@
     "pages/list/LocalDataListPage",
     "pages/list/NetListPage",
     "pages/web/WebPage",
-    "pages/DialogPage"
+    "pages/DialogPage",
+    "pages/list/RefreshLoadMoreListPage"
   ]
 }

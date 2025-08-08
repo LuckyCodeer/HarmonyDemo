@@ -5,7 +5,9 @@ import { Website } from "../../entity/Website";
 export function PageBuilder() {
   WebPage();
 }
-
+/**
+ * 浏览器页面
+ */
 @Entry
 @Component
 struct WebPage {
