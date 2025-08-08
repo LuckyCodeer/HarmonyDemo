@@ -35,6 +35,8 @@ struct LocalDataListPage {
           Text('测试5')
         }.padding(10)
       }.divider({ strokeWidth: 1, color: '#efefef' })
+      .width('100%')
+      .height('100%')
       .listDirection(this.listDirection)
     }.title('本地数据列表').onReady((context: NavDestinationContext) => {
       if (context.pathInfo.param != null) {
