@@ -9,6 +9,7 @@
     "pages/list/NetListPage",
     "pages/web/WebPage",
     "pages/DialogPage",
-    "pages/list/RefreshLoadMoreListPage"
+    "pages/list/RefreshLoadMoreListPage",
+    "pages/CustomWidgetPage"
   ]
 }

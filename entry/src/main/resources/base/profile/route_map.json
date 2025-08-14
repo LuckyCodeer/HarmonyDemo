@@ -87,6 +87,14 @@
       "data": {
         "description" : "下拉刷新下拉加载更多"
       }
+    },
+    {
+      "name": "CustomWidgetPage",
+      "pageSourceFile": "src/main/ets/pages/CustomWidgetPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "自定义组件"
+      }
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { promptAction } from "@kit.ArkUI"
 import window from '@ohos.window';
+import { DateUtils } from "../utils/DateUtils";
 
 @Builder
 export function PageBuilder() {
@@ -26,9 +27,11 @@ struct LoadingDialogExample {
 @Component
 struct DialogPage {
   dialogController: CustomDialogController | null = null;
+  @State showPop: boolean = false
+
   build() {
     NavDestination() {
-      Column({space: '20fp'}) {
+      Column({ space: '20fp' }) {
         Button('对话框').onClick(() => {
           promptAction.showDialog({
             title: "提示",
@@ -78,7 +81,7 @@ struct DialogPage {
               }
             ]
           }, (err, data) => {
-            promptAction.showToast({message: data.index.toString()})
+            promptAction.showToast({ message: data.index.toString() })
           })
         })
 
@@ -129,9 +132,47 @@ struct DialogPage {
           })
         })
 
-        Button('自定义弹框').onClick(()=> {
+        Button('提示弹框').onClick(() => {
+          this.getUIContext().showAlertDialog({
+            title: '提示',
+            message: '请求错误，请重试！',
+            autoCancel: false,
+            confirm: {value: '确定', action: ()=> {
 
+            }}
+          })
         })
+
+        Button('日期日历选择').onClick(() => {
+          CalendarPickerDialog.show({
+            onAccept: (date) => {
+              let dateUtils = new DateUtils()
+              promptAction.showToast({ message: dateUtils.dateFormat(date) })
+            }
+          })
+        })
+
+        Button('日期滑动选择').onClick(() => {
+          this.getUIContext().showDatePickerDialog({
+            lunarSwitch: true,
+            showTime: false,
+            onDateAccept: (date) => {
+              let dateUtils = new DateUtils()
+              promptAction.showToast({ message: dateUtils.dateFormat(date) })
+            }
+          })
+        })
+
+        Button('气泡')
+          .bindPopup(this.showPop, {
+            message: '这是一个按钮',
+            arrowPointPosition: ArrowPointPosition.CENTER,
+            placement: Placement.Top,
+            onStateChange: (b) => {
+              this.showPop = b.isVisible
+            }
+          })
+          .onClick(() => this.showPop = !this.showPop)
       }
     }.title("弹框")
   }

@@ -42,6 +42,11 @@ struct Index {
           .onClick(() => {
             this.pageStack.pushDestinationByName("DialogPage", "", true);
           })
+
+        Button('自定义组件')
+          .onClick(() => {
+            this.pageStack.pushDestinationByName("CustomWidgetPage", "", true);
+          })
       }
       .justifyContent(FlexAlign.Center)
       .height('100%')
