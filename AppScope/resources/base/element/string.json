@@ -3,6 +3,10 @@
     {
       "name": "app_name",
       "value": "鸿蒙组件Demo"
+    },
+    {
+      "name": "image_video_permission_desc",
+      "value": "上传头像附件需要"
     }
   ]
 }

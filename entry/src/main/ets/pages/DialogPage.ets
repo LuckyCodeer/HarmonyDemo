@@ -1,6 +1,23 @@
-import { promptAction } from "@kit.ArkUI"
+import { ComponentContent, promptAction } from "@kit.ArkUI"
 import window from '@ohos.window';
 import { DateUtils } from "../utils/DateUtils";
+
+@Builder
+function customDialogComponent(args: object) {
+  Column({ space: '25fp' }) {
+    Text('自定义弹框')
+    Row() {
+      Progress({
+        value: 20,
+        total: 100
+      }).layoutWeight(1)
+      Text('20%').margin({left: 10})
+    }
+  }.padding(30)
+  .width("90%")
+  .borderRadius(8)
+  .backgroundColor('#FFF0F0F0')
+}
 
 @Builder
 export function PageBuilder() {
@@ -32,6 +49,17 @@ struct DialogPage {
   build() {
     NavDestination() {
       Column({ space: '20fp' }) {
+        Button('自定义弹框').onClick(() => {
+          let uiContext = this.getUIContext();
+          let contentNode =
+            new ComponentContent(uiContext, wrapBuilder(customDialogComponent), new Object());
+          this.getUIContext().getPromptAction().openCustomDialog(contentNode, {
+            autoCancel: false,
+            onDidDisappear: () => {
+            }
+          })
+        })
+
         Button('对话框').onClick(() => {
           promptAction.showDialog({
             title: "提示",
@@ -81,6 +109,9 @@ struct DialogPage {
               }
             ]
           }, (err, data) => {
+            if (err != null) {
+              return
+            }
             promptAction.showToast({ message: data.index.toString() })
           })
         })

@@ -10,6 +10,8 @@
     "pages/web/WebPage",
     "pages/DialogPage",
     "pages/list/RefreshLoadMoreListPage",
-    "pages/CustomWidgetPage"
+    "pages/CustomWidgetPage",
+    "pages/banner/BannerPage",
+    "pages/api/ApiPage"
   ]
 }

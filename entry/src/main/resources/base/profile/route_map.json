@@ -95,6 +95,22 @@
       "data": {
         "description" : "自定义组件"
       }
+    },
+    {
+      "name": "BannerPage",
+      "pageSourceFile": "src/main/ets/pages/banner/BannerPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "Banner"
+      }
+    },
+    {
+      "name": "ApiPage",
+      "pageSourceFile": "src/main/ets/pages/api/ApiPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "Api"
+      }
     }
   ]
 }

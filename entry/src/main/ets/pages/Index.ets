@@ -8,7 +8,7 @@ struct Index {
 
   build() {
     Navigation(this.pageStack) {
-      Column({space: '15fp'}) {
+      Column({ space: '15fp' }) {
         Button('文本组件')
           .onClick(() => {
             this.pageStack.pushDestinationByName("TextPage", "", true).catch((error: BusinessError) => {
@@ -26,6 +26,11 @@ struct Index {
         Button('图片组件')
           .onClick(() => {
             this.pageStack.pushDestinationByName("ImagePage", "", true);
+          })
+
+        Button('轮播图')
+          .onClick(() => {
+            this.pageStack.pushDestinationByName("BannerPage", "", true);
           })
 
         Button('选择组件')
@@ -47,10 +52,31 @@ struct Index {
           .onClick(() => {
             this.pageStack.pushDestinationByName("CustomWidgetPage", "", true);
           })
+
+        Button('其他API')
+          .onClick(() => {
+            this.pageStack.pushDestinationByName("ApiPage", "", true);
+          })
       }
       .justifyContent(FlexAlign.Center)
       .height('100%')
       .width('100%')
-    }.title("组件演示")
+    }
+    .title("组件演示")
+    .titleMode(NavigationTitleMode.Mini)
+    .hideBackButton(true)
+    .menus([{
+      value: '菜单1',
+      icon: $r('app.media.startIcon'),
+    }, {
+      value: '菜单2',
+      icon: $r('app.media.startIcon'),
+    }, {
+      value: '菜单3',
+      icon: $r('app.media.startIcon'),
+    }, {
+      value: '菜单4',
+      icon: $r('app.media.startIcon'),
+    }])
   }
 }
