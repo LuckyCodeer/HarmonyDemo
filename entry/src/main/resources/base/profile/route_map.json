@@ -111,6 +111,14 @@
       "data": {
         "description" : "Api"
       }
+    },
+    {
+      "name": "MediaPage",
+      "pageSourceFile": "src/main/ets/pages/media/MediaPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "Media"
+      }
     }
   ]
 }

@@ -43,6 +43,11 @@ struct Index {
             this.pageStack.pushDestinationByName("ListPage", "", true);
           })
 
+        Button('媒体组件')
+          .onClick(() => {
+            this.pageStack.pushDestinationByName("MediaPage", "", true);
+          })
+
         Button('弹框')
           .onClick(() => {
             this.pageStack.pushDestinationByName("DialogPage", "", true);

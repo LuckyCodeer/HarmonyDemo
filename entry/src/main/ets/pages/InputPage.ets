@@ -1,4 +1,4 @@
-import { LengthMetrics } from '@kit.ArkUI';
+import { LengthMetrics, promptAction } from '@kit.ArkUI';
 
 @Builder
 export function PageBuilder() {
@@ -70,6 +70,19 @@ struct InputPage {
         .alignItems(VerticalAlign.Center)
         .padding({left: '16fp', right: '16fp'})
         .margin({top: '10fp'})
+
+        Text('搜索框')
+          .margin({top: '15fp'})
+        Search({
+          placeholder: '请输入关键字'
+        }).onChange(e => {
+          console.log("==============" + e)
+        }).onSubmit(value => {
+          console.log("value: %s" , value)
+          promptAction.showToast({
+            message: '搜索：' + value
+          })
+        })
       }
       .alignItems(HorizontalAlign.Start)
       .padding({left: '10fp', right: '10fp'})

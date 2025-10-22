@@ -1,6 +1,8 @@
 import { scanBarcode, scanCore } from "@kit.ScanKit";
 import { camera, cameraPicker as picker } from '@kit.CameraKit';
 import { photoAccessHelper } from "@kit.MediaLibraryKit";
+import  { picker as filePicker } from '@kit.CoreFileKit';
+import { BusinessError } from "@kit.BasicServicesKit";
 
 @Builder
 export function PageBuilder() {
@@ -67,6 +69,28 @@ struct ApiPage {
               })
             }
             console.log("pickerResult======> " + pickerResult.resultUri + "  " + pickerResult.resultCode)
+          })
+
+        Button('文件选择')
+          .onClick(() => {
+            try {
+              let documentSelectOptions = new filePicker.DocumentSelectOptions();
+              documentSelectOptions.maxSelectNumber = 1 //最大选择数
+              // documentSelectOptions.fileSuffixFilters = ["表格|.xls"] //选择指定类型的文件
+              let documentPicker = new filePicker.DocumentViewPicker(getContext());
+              documentPicker.select(documentSelectOptions).then((documentSelectResult: Array<string>) => {
+                if (documentSelectResult.length > 0) {
+                  this.getUIContext().getPromptAction().showToast({
+                    message: JSON.stringify(documentSelectResult)
+                  })
+                }
+              }).catch((err: BusinessError) => {
+                console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+              });
+            } catch (error) {
+              let err: BusinessError = error as BusinessError;
+              console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+            }
           })
       }
     }

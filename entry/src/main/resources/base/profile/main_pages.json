@@ -12,6 +12,7 @@
     "pages/list/RefreshLoadMoreListPage",
     "pages/CustomWidgetPage",
     "pages/banner/BannerPage",
-    "pages/api/ApiPage"
+    "pages/api/ApiPage",
+    "pages/media/MediaPage"
   ]
 }
