@@ -13,6 +13,7 @@
     "pages/CustomWidgetPage",
     "pages/banner/BannerPage",
     "pages/api/ApiPage",
-    "pages/media/MediaPage"
+    "pages/media/MediaPage",
+    "pages/map/MapPage"
   ]
 }

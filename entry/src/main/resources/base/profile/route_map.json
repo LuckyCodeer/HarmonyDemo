@@ -119,6 +119,14 @@
       "data": {
         "description" : "Media"
       }
+    },
+    {
+      "name": "MapPage",
+      "pageSourceFile": "src/main/ets/pages/map/MapPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "Map"
+      }
     }
   ]
 }

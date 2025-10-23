@@ -23,6 +23,7 @@
         "startWindowIcon": "$media:startIcon",
         "startWindowBackground": "$color:start_window_background",
         "exported": true,
+        "orientation": "auto_rotation",
         "skills": [
           {
             "entities": [
@@ -59,6 +60,20 @@
         "usedScene": {
           "when": "inuse",
           "abilities": ["ApiPage"]
+        }
+      },
+      {
+        "name": "ohos.permission.APPROXIMATELY_LOCATION",
+        "reason": "$string:location_permission_desc",
+        "usedScene": {
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "$string:location_permission_desc",
+        "usedScene": {
+          "when": "always"
         }
       }
     ]

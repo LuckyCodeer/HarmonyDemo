@@ -7,6 +7,10 @@
     {
       "name": "image_video_permission_desc",
       "value": "上传头像附件需要"
+    },
+    {
+      "name": "location_permission_desc",
+      "value": "打卡需要获取当前位置"
     }
   ]
 }
