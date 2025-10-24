@@ -120,7 +120,7 @@ struct ApiPage {
                 if (isGrantPermission) {
                   geoLocationManager.getCurrentLocation().then((location: geoLocationManager.Location) => {
                     this.location = location
-                    console.log("additions===> " + location.additions?.toString())
+                    console.log(`additions===> ${location.additions?.toString()}`)
                     promptAction.showToast({
                       message: "经度：" + location.longitude + "，纬度：" + location.latitude,
                       duration: 5000

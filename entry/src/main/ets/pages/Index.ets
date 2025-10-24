@@ -60,6 +60,11 @@ struct Index {
               this.pageStack.pushDestinationByName("MapPage", "", true);
             })
 
+          Button('导航栏')
+            .onClick(() => {
+              this.pageStack.pushDestinationByName("TabPage", "", true);
+            })
+
           Button('自定义组件')
             .onClick(() => {
               this.pageStack.pushDestinationByName("CustomWidgetPage", "", true);

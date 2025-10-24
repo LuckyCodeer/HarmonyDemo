@@ -127,6 +127,14 @@
       "data": {
         "description" : "Map"
       }
+    },
+    {
+      "name": "TabPage",
+      "pageSourceFile": "src/main/ets/pages/tab/TabPage.ets",
+      "buildFunction": "PageBuilder",
+      "data": {
+        "description" : "Tab"
+      }
     }
   ]
 }
